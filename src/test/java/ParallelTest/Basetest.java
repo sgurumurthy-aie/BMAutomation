@@ -52,6 +52,7 @@ public class Basetest {
 		htmlReporter.config().setDocumentTitle("BM Execution Report");
 		htmlReporter.config().setReportName("Production Report");
 		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("DD:MM:YYY");
 		
 		
 		extent = new ExtentReports();
