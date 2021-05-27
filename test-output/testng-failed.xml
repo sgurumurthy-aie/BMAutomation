@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="customListeners.ListenersImplementation"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="passWord" value="test1234"/>
+    <parameter name="Browsers" value="chrome"/>
+    <parameter name="userName" value="gskprod11@aie.com"/>
     <classes>
-      <class name="ParallelTest.ParallelExecution">
+      <class name="TestCases.Cartfunctionality">
         <methods>
+          <include name="closebrowser"/>
+          <include name="inStorepickup" invocation-numbers="0"/>
           <include name="browserlaunch"/>
         </methods>
-      </class> <!-- ParallelTest.ParallelExecution -->
+      </class> <!-- TestCases.Cartfunctionality -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
