@@ -4,18 +4,46 @@
   <listeners>
     <listener class-name="customListeners.ListenersImplementation"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name="Test_Desktop(failed)">
     <parameter name="passWord" value="test1234"/>
-    <parameter name="Browsers" value="chrome"/>
+    <parameter name="Browsers" value="Chrome"/>
     <parameter name="userName" value="gskprod11@aie.com"/>
     <classes>
-      <class name="TestCases.Cartfunctionality">
+      <class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification">
         <methods>
           <include name="closebrowser"/>
-          <include name="inStorepickup" invocation-numbers="0"/>
+          <include name="verifyCartUpdate"/>
           <include name="browserlaunch"/>
         </methods>
-      </class> <!-- TestCases.Cartfunctionality -->
+      </class> <!-- com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification -->
+      <class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="verifysearchasGuest"/>
+          <include name="browserlaunch"/>
+        </methods>
+      </class> <!-- com.bmusa.TestCases.Desktop_SearchandBrowserVerification -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test_Desktop(failed) -->
+  <test thread-count="5" parallel="tests" name="Test_Mobile(failed)">
+    <parameter name="passWord" value="test1234"/>
+    <parameter name="Browsers" value="Firefox"/>
+    <parameter name="userName" value="gskprod12@aie.com"/>
+    <classes>
+      <class name="com.bmusa.TestCases.Mobile_userAccountVerification">
+        <methods>
+          <include name="browserlaunch"/>
+          <include name="verifyMobileAccountnavigation" invocation-numbers="0"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- com.bmusa.TestCases.Mobile_userAccountVerification -->
+      <class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification">
+        <methods>
+          <include name="verifymobilecartSummary"/>
+          <include name="browserlaunch"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification -->
+    </classes>
+  </test> <!-- Test_Mobile(failed) -->
 </suite> <!-- Failed suite [Suite] -->

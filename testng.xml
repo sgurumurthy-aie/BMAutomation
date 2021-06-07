@@ -5,28 +5,32 @@
 	<listeners>
 		<listener
 			class-name="customListeners.ListenersImplementation"></listener>
-
 	</listeners>
 
-
-	<test name="Test">
-		<parameter name="Browsers" value="Firefox"></parameter>
+	<test name="Test_Desktop">
+		<parameter name="Browsers" value="Chrome"></parameter>
 		<parameter name="userName" value="gskprod11@aie.com"></parameter>
 		<parameter name="passWord" value="test1234"></parameter>
-		
-		
-
-
 		<classes>
-
-			<class name="TestCases.Login" />
-			<class name="TestCases.userProfile" />
-			<class name="TestCases.StoreLocator" />
-			<class name="TestCases.searchandBrowse"/>
-			<class name="TestCases.Cartfunctionality"/>
+			<class name="com.bmusa.TestCases.Desktop_AccountVerification" />
+			<class name="com.bmusa.TestCases.Desktop_userAccountVerification" /> 
+			<class name="com.bmusa.TestCases.Desktop_StoreandZipupdateVerification" /> 
+			<class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification" /> 
+			<class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification" />
 		</classes>
 	</test> <!-- Test -->
 
+	<test name="Test_Mobile">
+		<parameter name="Browsers" value="Firefox"></parameter>
+		<parameter name="userName" value="gskprod12@aie.com"></parameter>
+		<parameter name="passWord" value="test1234"></parameter>
+		<classes>
+			<class name="com.bmusa.TestCases.Mobile_AccountVerification" />
+			<class name="com.bmusa.TestCases.Mobile_SearchandBrowserVerification" />
+			<class name="com.bmusa.TestCases.Mobile_StoreandZipupdateVerification" />
+			<class name="com.bmusa.TestCases.Mobile_userAccountVerification"/>
+			<class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification"/>
 
-
+		</classes>
+	</test>
 </suite> <!-- Suite -->
