@@ -14,8 +14,6 @@ import com.bmusa.pages.StoreLocator;
 import com.bmusa.pages.searchandBrowse;
 import com.bmusa.pages.userProfile;
 
-
-
 public class Mobile_Basetest {
 
 	BrowserFactory bfs1 = new BrowserFactory();

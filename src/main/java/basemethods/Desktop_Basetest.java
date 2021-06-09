@@ -12,8 +12,6 @@ import com.bmusa.pages.Login;
 import com.bmusa.pages.StoreLocator;
 import com.bmusa.pages.searchandBrowse;
 import com.bmusa.pages.userProfile;
-
-import org.openqa.selenium.Dimension;
 public class Desktop_Basetest {
 
 	BrowserFactory bfs = new BrowserFactory();

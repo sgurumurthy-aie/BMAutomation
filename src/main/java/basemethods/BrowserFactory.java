@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
 
-	//create webdriver object for given browser
+	//create webDriver object for given browser
 	public WebDriver createBrowserInstance(String browser) throws MalformedURLException {
 
 		WebDriver driver = null;

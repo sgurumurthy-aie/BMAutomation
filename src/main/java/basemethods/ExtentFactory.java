@@ -3,6 +3,7 @@ package basemethods;
 import com.aventstack.extentreports.ExtentTest;
 
 
+
 public class ExtentFactory {
 	//Singleton design Pattern
 	//private constructor so that no one else can create object of this class

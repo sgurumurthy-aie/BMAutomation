@@ -9,7 +9,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 //import reusableComponents.PropertiesOperations;
 
-
 public class ExtentReportNG {
 	
 	static ExtentReports extent;
