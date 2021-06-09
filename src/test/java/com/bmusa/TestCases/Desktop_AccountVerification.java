@@ -14,9 +14,6 @@ public class Desktop_AccountVerification extends Desktop_Basetest{
 
 	@Test
 	public void BannerVerification() {
-		
-
-
 		Assert.assertTrue(lg.FlyoutBannerverification(), "Banner not found");
 
 	}

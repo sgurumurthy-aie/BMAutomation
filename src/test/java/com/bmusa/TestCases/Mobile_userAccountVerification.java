@@ -8,6 +8,7 @@ import basemethods.Mobile_Basetest;
 
 public class Mobile_userAccountVerification extends Mobile_Basetest{
 
+	
 	@Parameters ({"userName","passWord"})
 	@Test
 	public void verifyMobileAccountnavigation(String userName, String passWord) {

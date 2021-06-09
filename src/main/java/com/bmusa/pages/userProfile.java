@@ -120,13 +120,13 @@ public class userProfile {
 		com.sleepSeconds(4, "awaiting profilelink");
 		dropdown.click();
 		myaccountLink.click();
-		com.sleepSeconds(2, "awaiting profilelink");
+		com.sleepSeconds(3, "awaiting profilelink");
 		profilelink.click();
 		profilefirstname.clear();
 		profilefirstname.sendKeys("Shashikumar");
 		profilelastname.clear();
 		profilelastname.sendKeys("kumarG-");
-		com.sleepSeconds(2, "awaiting profilelink");
+		com.sleepSeconds(3, "awaiting profilelink");
 		updateAddress.click();
 		com.waitTillWebElementIsVisible(accountOverview, 3);
 

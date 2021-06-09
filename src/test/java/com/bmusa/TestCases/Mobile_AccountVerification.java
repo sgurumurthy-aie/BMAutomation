@@ -14,6 +14,7 @@ public class Mobile_AccountVerification extends Mobile_Basetest {
 		Assert.assertTrue(mlg.mob_bannerverification(), "Banner not found");
 
 	}
+	
 
 	@Parameters({ "userName", "passWord" })
 	@Test

@@ -124,6 +124,7 @@ public class Login {
 
 		com.sleepSeconds(2, "");
 		mob_accountdropdown.click();
+		com.sleepSeconds(2, "");
 
 		if (mob_myaccountText.getText().contains("Account")) {
 			ExtentFactory.getInstance().getExtent()

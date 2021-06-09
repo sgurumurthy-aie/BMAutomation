@@ -13,29 +13,27 @@ public class Desktop_SearchandBrowserVerification extends Desktop_Basetest {
 		Assert.assertTrue(sb.searchProductasGuest(), "search as guest unsuccessful");
 	}
 
-	//@Test
+	@Test
 	public void verifycategory() {
 
 		Assert.assertTrue(sb.categoryNavigation(), "category navigation unsuccessful");
 	}
 
-	//@Test
+	@Test
 	public void verifyplp() {
 
 		Assert.assertTrue(sb.PLP(), "PLP add to cart unsuccessful");
 	}
 
-	
-	
-	//@Test
+	@Test
 	public void verifyplpaddtocart() {
 
 		Assert.assertTrue(sb.PLPaddtoCart(), "PLP add to cart unsuccessful");
 	}
-	
-	//@Test
+
+	@Test
 	public void verifypddaddtocart() {
-		
+
 		Assert.assertTrue(sb.PDPaddtoCart(), "pdp add to cart unsucessful");
 	}
 }

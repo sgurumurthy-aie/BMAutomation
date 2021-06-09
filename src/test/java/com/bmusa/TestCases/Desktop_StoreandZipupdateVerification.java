@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 import basemethods.Desktop_Basetest;
 
 public class Desktop_StoreandZipupdateVerification extends Desktop_Basetest {
-	
-	//@Test
+
+	@Test
 	public void verifystorelocatorpage() {
-		
+
 		Assert.assertTrue(st.storeLocatortest(), "Store locator landing page unsuccessful");
-		
+
 	}
 
 	@Test
@@ -19,5 +19,5 @@ public class Desktop_StoreandZipupdateVerification extends Desktop_Basetest {
 		st.modifyzip("10004");
 		Assert.assertTrue(st.updateZipCode(), "Zipupdate unsuccessful");
 	}
-	
+
 }

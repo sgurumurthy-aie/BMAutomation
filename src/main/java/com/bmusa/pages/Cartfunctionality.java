@@ -92,7 +92,7 @@ public class Cartfunctionality extends Desktop_Basetest {
 	
 	public boolean inStorepickup()  {
 
-		com.sleepSeconds(3, "awaiting webelement to appear");
+		com.sleepSeconds(4, "awaiting webelement to appear");
 		Select devoption = new Select(deliveryoption);
 		devoption.selectByVisibleText("Pickup From Store");
 		com.sleepSeconds(3, "awaiting webelement to appear");

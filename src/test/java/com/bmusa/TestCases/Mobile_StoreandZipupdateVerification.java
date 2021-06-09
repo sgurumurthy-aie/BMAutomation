@@ -7,6 +7,7 @@ import basemethods.Mobile_Basetest;
 
 public class Mobile_StoreandZipupdateVerification extends Mobile_Basetest{
 	
+	
 	@Test
 	public void mobileStorelocator() {
 		

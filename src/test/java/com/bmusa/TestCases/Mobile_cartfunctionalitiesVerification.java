@@ -9,6 +9,7 @@ import basemethods.Mobile_Basetest;
 public class Mobile_cartfunctionalitiesVerification extends Mobile_Basetest{
 	
 	
+	
 	@Test
 	public void verifymobilecartSummary() {
 		

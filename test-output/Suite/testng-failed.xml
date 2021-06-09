@@ -4,27 +4,6 @@
   <listeners>
     <listener class-name="customListeners.ListenersImplementation"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test_Desktop(failed)">
-    <parameter name="passWord" value="test1234"/>
-    <parameter name="Browsers" value="Chrome"/>
-    <parameter name="userName" value="gskprod11@aie.com"/>
-    <classes>
-      <class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification">
-        <methods>
-          <include name="closebrowser"/>
-          <include name="verifyCartUpdate"/>
-          <include name="browserlaunch"/>
-        </methods>
-      </class> <!-- com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification -->
-      <class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification">
-        <methods>
-          <include name="closebrowser"/>
-          <include name="verifysearchasGuest"/>
-          <include name="browserlaunch"/>
-        </methods>
-      </class> <!-- com.bmusa.TestCases.Desktop_SearchandBrowserVerification -->
-    </classes>
-  </test> <!-- Test_Desktop(failed) -->
   <test thread-count="5" parallel="tests" name="Test_Mobile(failed)">
     <parameter name="passWord" value="test1234"/>
     <parameter name="Browsers" value="Firefox"/>
@@ -33,7 +12,9 @@
       <class name="com.bmusa.TestCases.Mobile_userAccountVerification">
         <methods>
           <include name="browserlaunch"/>
-          <include name="verifyMobileAccountnavigation" invocation-numbers="0"/>
+          <include name="verifyMobileAccountnavigation"/>
+          <include name="verifymobileEditProfile"/>
+          <include name="verifymobileforgotpassword"/>
           <include name="closebrowser"/>
         </methods>
       </class> <!-- com.bmusa.TestCases.Mobile_userAccountVerification -->
@@ -41,9 +22,31 @@
         <methods>
           <include name="verifymobilecartSummary"/>
           <include name="browserlaunch"/>
+          <include name="verifymobileQtyUpdate"/>
           <include name="closebrowser"/>
         </methods>
       </class> <!-- com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification -->
+      <class name="com.bmusa.TestCases.Mobile_StoreandZipupdateVerification">
+        <methods>
+          <include name="mobileStorelocator"/>
+          <include name="browserlaunch"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- com.bmusa.TestCases.Mobile_StoreandZipupdateVerification -->
     </classes>
   </test> <!-- Test_Mobile(failed) -->
+  <test thread-count="5" parallel="tests" name="Test_Desktop(failed)">
+    <parameter name="passWord" value="test1234"/>
+    <parameter name="Browsers" value="Chrome"/>
+    <parameter name="userName" value="gskprod11@aie.com"/>
+    <classes>
+      <class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="browserlaunch"/>
+          <include name="verifypddaddtocart"/>
+        </methods>
+      </class> <!-- com.bmusa.TestCases.Desktop_SearchandBrowserVerification -->
+    </classes>
+  </test> <!-- Test_Desktop(failed) -->
 </suite> <!-- Failed suite [Suite] -->

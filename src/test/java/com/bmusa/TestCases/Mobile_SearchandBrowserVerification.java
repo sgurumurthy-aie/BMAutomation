@@ -8,6 +8,7 @@ import basemethods.Mobile_Basetest;
 public class Mobile_SearchandBrowserVerification extends Mobile_Basetest{
 	
 	
+	
 	@Test
 	public void VerifyMobilesearchasGuest() {
 		
