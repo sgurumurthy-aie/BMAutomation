@@ -15,7 +15,7 @@ public class Commonfunctionalities {
 	public void clearText(WebElement element) {
 		element.clear();
 		
-			}
+	}
 	
 	public void mouseoveraction(WebElement webelement) {
 		
