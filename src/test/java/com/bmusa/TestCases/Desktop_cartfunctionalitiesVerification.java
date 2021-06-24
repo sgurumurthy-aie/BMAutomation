@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import basemethods.Desktop_Basetest;
+import basemethods.Basetest;
 
-public class Desktop_cartfunctionalitiesVerification extends Desktop_Basetest {
+public class Desktop_cartfunctionalitiesVerification extends Basetest {
 
 	@Test
 	public void verifycartsummary() {
@@ -29,14 +29,17 @@ public class Desktop_cartfunctionalitiesVerification extends Desktop_Basetest {
 		Assert.assertTrue(ct.cartupdate(), "cart qty updated unsuccessful");
 	}
 
-	@Parameters({ "userName", "passWord" })
+	@Parameters({ "userName1", "passWord1" })
 	@Test
 	public void verifyInstorePickup(String username, String password) {
-		lg.loginlinkClick().enterUsername(username).enterPassword(password).clickonSigninButton();
+		lg.loginlinkClick();
+		/*  lg.enterUsername(username); lg.enterPassword(password);
+		 * lg.clickonSigninButton();
+		 */
 		st.modifyzip("33312");
 		sb.enterSearchterm("218664").clickSearchbutton();
 		ct.clicksearchandaddtocart();
-		Assert.assertTrue(ct.inStorepickup(), " instore pick up and  item remove not updated unsuccessful");
+		Assert.assertTrue(ct.inStorepickup(username,password), " instore pick up and  item remove not updated unsuccessful");
 
 	}
 

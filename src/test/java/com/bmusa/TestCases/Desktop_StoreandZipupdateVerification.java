@@ -3,9 +3,9 @@ package com.bmusa.TestCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import basemethods.Desktop_Basetest;
+import basemethods.Basetest;
 
-public class Desktop_StoreandZipupdateVerification extends Desktop_Basetest {
+public class Desktop_StoreandZipupdateVerification extends Basetest {
 
 	@Test
 	public void verifystorelocatorpage() {

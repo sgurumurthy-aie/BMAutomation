@@ -3,17 +3,17 @@ package com.bmusa.TestCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import basemethods.Mobile_Basetest;
+import basemethods.Basetest;
 
-public class Mobile_StoreandZipupdateVerification extends Mobile_Basetest{
+public class Mobile_StoreandZipupdateVerification extends Basetest{
 	
 	
 	@Test
 	public void mobileStorelocator() {
 		
-		msb.mobMenuClick();
+		sb.mobMenuClick();
 		
-		Assert.assertTrue(mst.mobileStorelocator(), null);
+		Assert.assertTrue(st.mobileStorelocator(), "Mobile store locator page not loaded");
 	}
 
 }

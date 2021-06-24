@@ -122,9 +122,9 @@ public class Login {
 
 	public boolean mobile_verifylogin() {
 
-		com.sleepSeconds(2, "");
+		com.sleepSeconds(4, "");
 		mob_accountdropdown.click();
-		com.sleepSeconds(2, "");
+		com.sleepSeconds(4, "");
 
 		if (mob_myaccountText.getText().contains("Account")) {
 			ExtentFactory.getInstance().getExtent()
@@ -171,7 +171,7 @@ public class Login {
 
 	public void clickonSigninButton() {
 		signButton.click();
-		com.sleepSeconds(1, "wait for loginlink Element");
+		com.sleepSeconds(5, "wait for loginlink Element");
 		//return this;
 
 	}

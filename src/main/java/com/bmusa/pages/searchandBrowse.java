@@ -322,5 +322,11 @@ public class searchandBrowse {
 		mob_submenu.click();
 		return this;
 	}
+	
+	public searchandBrowse addtocartclick() {
+		pdpaddtocart.click();
+		return this;
+		
+	}
 
 }

@@ -18,6 +18,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import basemethods.BrowserFactory;
 import basemethods.DriverFactory;
 import basemethods.ExtentFactory;
 import basemethods.ExtentReportNG;
@@ -31,6 +32,7 @@ public class ListenersImplementation implements ITestListener{
 		   
 	public void onTestStart(ITestResult result) {
 		//before each test case
+		
 		test = report.createTest(result.getMethod().getMethodName());
 		ExtentFactory.getInstance().setExtent(test);
 	}
@@ -99,11 +101,15 @@ public class ListenersImplementation implements ITestListener{
 	}
 
 	public void onStart(ITestContext context) {
+		//BrowserFactory.getbrowsernameXML(context);
+		//BrowserFactory.getdevicenameXML(context);
+		
 		try {
 			 report = ExtentReportNG.setupExtentReport();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public void onFinish(ITestContext context) {
