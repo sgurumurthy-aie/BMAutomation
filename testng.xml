@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite"  thread-count="5">
+<suite name="Suite" parallel="tests" thread-count="5">
 
 	<listeners>
-		<listener
-			class-name="customListeners.ListenersImplementation"></listener>
+		<listener class-name="customListeners.ListenersImplementation"></listener>
 	</listeners>
 
 	<test name="Test_Desktop">
-		<parameter name="Browsers" value="Firefox"></parameter>
+		<parameter name="Browsers" value="Chrome"></parameter>
 		<parameter name="userName" value="gskprod11@aie.com"></parameter>
 		<parameter name="passWord" value="test1234"></parameter>
+		<parameter name="userName1" value="gskprod14@aie.com"></parameter>
+		<parameter name="passWord1" value="test1234"></parameter>
+		<parameter name="Device" value="Desktop"></parameter>
+		
 		<classes>
 			<class name="com.bmusa.TestCases.Desktop_AccountVerification" />
-			<class name="com.bmusa.TestCases.Desktop_userAccountVerification" /> 
-			<class name="com.bmusa.TestCases.Desktop_StoreandZipupdateVerification" /> 
-			<class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification" /> 
-			<class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification" />
+			<class name="com.bmusa.TestCases.Desktop_StoreandZipupdateVerification" />
+			<class name="com.bmusa.TestCases.Desktop_userAccountVerification" />
+			<class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification" />
+			<class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification" /> 
+			<class name="com.bmusa.TestCases.Desktop_staticpageValidation" />
+			<class name="com.bmusa.TestCases.Desktop_PaymentVerification" />
+
 		</classes>
-	</test> <!-- Test -->
+	</test> 
 
 	<test name="Test_Mobile">
-		<parameter name="Browsers" value="Firefox"></parameter>
+		<parameter name="Browsers" value="Chrome"></parameter>
 		<parameter name="userName" value="gskprod12@aie.com"></parameter>
 		<parameter name="passWord" value="test1234"></parameter>
+		<parameter name="userName1" value="gskprod13@aie.com"></parameter>
+		<parameter name="passWord1" value="test1234"></parameter>
+		<parameter name="Device" value="Mobile"></parameter>
 		<classes>
 			<class name="com.bmusa.TestCases.Mobile_AccountVerification" />
 			<class name="com.bmusa.TestCases.Mobile_SearchandBrowserVerification" />
+			<class name="com.bmusa.TestCases.Mobile_userAccountVerification" />
 			<class name="com.bmusa.TestCases.Mobile_StoreandZipupdateVerification" />
-			<class name="com.bmusa.TestCases.Mobile_userAccountVerification"/>
-			<class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification"/>
+			<class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification" />
+			<class name="com.bmusa.TestCases.Mobile_staticValidation" />
+			<class name="com.bmusa.TestCases.Mobile_PaymentVerification" />
+
 
 		</classes>
 	</test>
-</suite> <!-- Suite -->
+
+	<!-- <test name="Orderplacement">
+		<parameter name="Browsers" value="Firefox"></parameter>
+		<parameter name="userName" value="gsk12@aie.com"></parameter>
+		<parameter name="passWord" value="test1234"></parameter>
+		<classes>
+			<class name="com.bmusa.orderplacement.Testcases.Desktop_Orderplacements"/>
+		</classes>
+
+
+	</test> -->
+
+
+</suite> 

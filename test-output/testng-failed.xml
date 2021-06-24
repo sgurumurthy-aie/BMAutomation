@@ -6,47 +6,43 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="Test_Mobile(failed)">
     <parameter name="passWord" value="test1234"/>
-    <parameter name="Browsers" value="Firefox"/>
+    <parameter name="Device" value="Mobile"/>
+    <parameter name="Browsers" value="Chrome"/>
     <parameter name="userName" value="gskprod12@aie.com"/>
+    <parameter name="passWord1" value="test1234"/>
+    <parameter name="userName1" value="gskprod13@aie.com"/>
     <classes>
-      <class name="com.bmusa.TestCases.Mobile_userAccountVerification">
-        <methods>
-          <include name="browserlaunch"/>
-          <include name="verifyMobileAccountnavigation"/>
-          <include name="verifymobileEditProfile"/>
-          <include name="verifymobileforgotpassword"/>
-          <include name="closebrowser"/>
-        </methods>
-      </class> <!-- com.bmusa.TestCases.Mobile_userAccountVerification -->
       <class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification">
         <methods>
-          <include name="verifymobilecartSummary"/>
+          <include name="verifyMobileInstorePickup" invocation-numbers="0"/>
           <include name="browserlaunch"/>
-          <include name="verifymobileQtyUpdate"/>
           <include name="closebrowser"/>
         </methods>
       </class> <!-- com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification -->
-      <class name="com.bmusa.TestCases.Mobile_StoreandZipupdateVerification">
+      <class name="com.bmusa.TestCases.Mobile_userAccountVerification">
         <methods>
-          <include name="mobileStorelocator"/>
           <include name="browserlaunch"/>
+          <include name="verifymobileEditProfile" invocation-numbers="0"/>
           <include name="closebrowser"/>
         </methods>
-      </class> <!-- com.bmusa.TestCases.Mobile_StoreandZipupdateVerification -->
+      </class> <!-- com.bmusa.TestCases.Mobile_userAccountVerification -->
     </classes>
   </test> <!-- Test_Mobile(failed) -->
   <test thread-count="5" parallel="tests" name="Test_Desktop(failed)">
     <parameter name="passWord" value="test1234"/>
+    <parameter name="Device" value="Desktop"/>
     <parameter name="Browsers" value="Chrome"/>
     <parameter name="userName" value="gskprod11@aie.com"/>
+    <parameter name="passWord1" value="test1234"/>
+    <parameter name="userName1" value="gskprod14@aie.com"/>
     <classes>
-      <class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification">
+      <class name="com.bmusa.TestCases.Desktop_userAccountVerification">
         <methods>
-          <include name="closebrowser"/>
           <include name="browserlaunch"/>
-          <include name="verifypddaddtocart"/>
+          <include name="verifyEditProfile" invocation-numbers="0"/>
+          <include name="closebrowser"/>
         </methods>
-      </class> <!-- com.bmusa.TestCases.Desktop_SearchandBrowserVerification -->
+      </class> <!-- com.bmusa.TestCases.Desktop_userAccountVerification -->
     </classes>
   </test> <!-- Test_Desktop(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,44 +4,45 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import basemethods.Mobile_Basetest;
+import basemethods.Basetest;
 
-public class Mobile_cartfunctionalitiesVerification extends Mobile_Basetest{
+public class Mobile_cartfunctionalitiesVerification extends Basetest{
 	
 	
 	
 	@Test
 	public void verifymobilecartSummary() {
 		
-		mlg.mob_accountClick();
-		msb.enterSearchterm("235422");
-		msb.clickSearchbutton();
-		mct.clicksearchandaddtocart();
-		mct.clickwarranty();
+		lg.mob_accountClick();
+		sb.enterSearchterm("235422");
+		sb.clickSearchbutton();
+		ct.clicksearchandaddtocart();
+		ct.clickwarranty();
 		
-		Assert.assertTrue(mct.cartSummary(),"Cart Summary not displayed");		
+		Assert.assertTrue(ct.cartSummary(),"Cart Summary not displayed");		
 	}
 	
 	
 	@Test
 	public void verifymobileQtyUpdate() {
-		mlg.mob_accountClick();
-		msb.enterSearchterm("247796");
-		msb.clickSearchbutton();
-		mct.clicksearchandaddtocart();
+		lg.mob_accountClick();
+		sb.enterSearchterm("247796");
+		sb.clickSearchbutton();
+		ct.clicksearchandaddtocart();
 				
-		Assert.assertTrue(mct.cartupdate(),"Cart Summary not displayed");	
+		Assert.assertTrue(ct.cartupdate(),"Cart Summary not displayed");	
 	}
 	
-	@Parameters({ "userName", "passWord" })
+	@Parameters({ "userName1", "passWord1" })
 	@Test
-	public void verifyInstorePickup(String username, String password) {
-		mlg.mob_accountClick();
-		mlg.enterUsername(username);
-		mlg.enterPassword(password);
-		mlg.clickonSigninButton();
-		msb.enterSearchterm("218664").clickSearchbutton();
-		mct.clicksearchandaddtocart();
-		Assert.assertTrue(mct.inStorepickup()," instore pick up and  item remove not updated unsuccessful");
+	public void verifyMobileInstorePickup(String username, String password) {
+		lg.mob_accountClick();
+		/*
+		 * lg.enterUsername(username); lg.enterPassword(password);
+		 * lg.clickonSigninButton();
+		 */
+		sb.enterSearchterm("218664").clickSearchbutton();
+		ct.clicksearchandaddtocart();
+		Assert.assertTrue(ct.inStorepickup(username, password)," instore pick up and  item remove not updated unsuccessful");
 	}
 }

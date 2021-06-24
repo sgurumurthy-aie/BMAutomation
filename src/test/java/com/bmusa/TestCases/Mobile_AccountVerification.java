@@ -1,17 +1,16 @@
-
 package com.bmusa.TestCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import basemethods.Mobile_Basetest;
+import basemethods.Basetest;
 
-public class Mobile_AccountVerification extends Mobile_Basetest {
+public class Mobile_AccountVerification extends Basetest {
 
 	@Test
 	public void BannerVerification() {
-		Assert.assertTrue(mlg.mob_bannerverification(), "Banner not found");
+		Assert.assertTrue(lg.mob_bannerverification(), "Banner not found");
 
 	}
 	
@@ -20,8 +19,8 @@ public class Mobile_AccountVerification extends Mobile_Basetest {
 	@Test
 	public void loginverification(String userName, String passWord) {
 
-		mlg.mob_accountClick().enterUsername(userName).enterPassword(passWord).clickonSigninButton();
-		Assert.assertTrue(mlg.mobile_verifylogin(), "Login unsuccessful");
+		lg.mob_accountClick().enterUsername(userName).enterPassword(passWord).clickonSigninButton();
+		Assert.assertTrue(lg.mobile_verifylogin(), "Login unsuccessful");
 	}
 
 }

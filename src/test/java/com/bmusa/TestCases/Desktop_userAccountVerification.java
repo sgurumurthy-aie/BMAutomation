@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import basemethods.Desktop_Basetest;
+import basemethods.Basetest;
 
-public class Desktop_userAccountVerification extends Desktop_Basetest {
+public class Desktop_userAccountVerification extends Basetest {
 
 	@Parameters({ "userName", "passWord" })
 	@Test

@@ -22,8 +22,11 @@ public class userProfile {
 	@FindBy(xpath = "//*[@id='bodyContainer']/app-my-account/section/div/app-overview/section/h1/strong")
 	private WebElement accountOverview;
 
-	@FindBy(xpath = "//*[@id='cFpContainer']/div/div[2]/a")
+	@FindBy(xpath = "//a[contains(text(),'Forgot password')]")
 	private WebElement forgotpwd;
+	
+	@FindBy (xpath = "//*[@id=\"cFpContainer\"]/div/div[2]/a")
+	private WebElement mob_forwardlink;
 
 	@FindBy(xpath = "//*[@id='login']")
 	private WebElement emailText;
@@ -100,7 +103,8 @@ public class userProfile {
 
 	public boolean forgotpassword() {
 
-		forgotpwd.click();
+		com.sleepSeconds(3, "Awaiting forgot password link");
+		mob_forwardlink.click();
 		emailText.sendKeys("sgurumurthy@aienterprise.com");
 		forgotpwdbutton.click();
 		com.sleepSeconds(3, "Awaiting for successmessage");
@@ -142,13 +146,14 @@ public class userProfile {
 	}
 
 	public boolean mobileeditProfile() {
-		com.sleepSeconds(3, "awaiting login to complete");
+		com.sleepSeconds(5, "awaiting login to complete");
 		mob_accountdropdown.click();
 		mob_myaccountText.click();
 		com.sleepSeconds(3, "awaiting login to complete");
 		mob_editprofilebutton.click();
 		profilefirstname.clear();
 		profilefirstname.sendKeys("Shashikumar");
+		com.sleepSeconds(1, "awaiting login to complete");
 		profilelastname.clear();
 		profilelastname.sendKeys("kumarG-");
 		com.sleepSeconds(3, "awaiting profilelink");

@@ -5,12 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import basemethods.Desktop_Basetest;
+import basemethods.Basetest;
 import basemethods.DriverFactory;
 import basemethods.ExtentFactory;
 import utility.Commonfunctionalities;
 
-public class Cartfunctionality extends Desktop_Basetest {
+public class Cartfunctionality extends Basetest {
 
 	Commonfunctionalities com = new Commonfunctionalities();
 
@@ -90,7 +90,7 @@ public class Cartfunctionality extends Desktop_Basetest {
 	}
 
 	
-	public boolean inStorepickup()  {
+	public boolean inStorepickup(String username, String password)  {
 
 		com.sleepSeconds(4, "awaiting webelement to appear");
 		Select devoption = new Select(deliveryoption);
@@ -98,7 +98,14 @@ public class Cartfunctionality extends Desktop_Basetest {
 		com.sleepSeconds(3, "awaiting webelement to appear");
 		Select store = new Select(storeOption);
 		store.selectByVisibleText("Sawgrass Mills - (18 minutes away)");
+		com.sleepSeconds(3, "awaiting webelement to appear");
 		clickCheckoutButton.click();
+		com.sleepSeconds(3, "awaiting webelement to appear");
+		com.entercheckoutusername(username);
+		com.entercheckoutpwdname(password);
+		com.sleepSeconds(2, "");
+		com.checkoutsigninBtnclick();
+		com.sleepSeconds(10, "");
 		com.sleepSeconds(3, "Awaiting to click logo");
 		logoClick.click();
 		DriverFactory.getInstance().getDriver().navigate().to("https://www.brandsmartusa.com/shopping-cart");
