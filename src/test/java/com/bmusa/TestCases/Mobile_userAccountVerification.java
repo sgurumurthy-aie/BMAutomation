@@ -25,7 +25,7 @@ public class Mobile_userAccountVerification extends Basetest{
 	}
 	
 	
-	@Parameters ({"userName","passWord"})
+	@Parameters ({"userName1","passWord1"})
 	@Test
 	public void verifymobileEditProfile(String userName, String passWord) {
 		lg.mob_accountClick();

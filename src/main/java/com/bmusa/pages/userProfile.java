@@ -48,7 +48,11 @@ public class userProfile {
 
 	@FindBy(xpath = "//*[@id='bodyContainer']/app-my-account/section/div/app-profile/section/form/div[2]/div/div/div/div[5]/div[1]/button")
 	private WebElement updateAddress;
-
+	
+	@FindBy (xpath = "//ul[@class='dropdown-menu']/li/following-sibling::li/a")
+	private WebElement logout;
+	
+	
 	// Mobile WebElements
 
 	@FindBy(xpath = "//*[@id='options']/li[1]/div/ul/li[1]/ul/li[1]/a")
@@ -77,6 +81,10 @@ public class userProfile {
 		com.sleepSeconds(2, "Awaiting text AccountOverview");
 		if (accountOverview.getText().equals("Account Overview")) {
 			ExtentFactory.getInstance().getExtent().info("Naviagted to Account Management");
+			dropdown.click();
+			com.sleepSeconds(2, "awaiting profilelink");
+			logout.click();
+			com.sleepSeconds(2, "awaiting profilelink");
 			return true;
 
 		} else {
@@ -93,6 +101,7 @@ public class userProfile {
 		com.sleepSeconds(2, "awaiting login to complete");
 		if (mob_emailID.getText().equalsIgnoreCase("gskprod12@aie.com")) {
 			ExtentFactory.getInstance().getExtent().info("Naviagted to Account Management");
+		
 			return true;
 		} else {
 			ExtentFactory.getInstance().getExtent().info("Not Naviagted to Account Management");
@@ -136,6 +145,10 @@ public class userProfile {
 
 		if (accountOverview.getText().equals("Account Overview")) {
 			ExtentFactory.getInstance().getExtent().info("Update successful and navigated to Account Management");
+			dropdown.click();
+			com.sleepSeconds(2, "awaiting profilelink");
+			logout.click();
+			com.sleepSeconds(2, "awaiting profilelink");
 			return true;
 
 		} else {

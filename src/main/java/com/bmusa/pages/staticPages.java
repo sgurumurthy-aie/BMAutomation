@@ -1,10 +1,7 @@
 package com.bmusa.pages;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -56,8 +53,8 @@ public class staticPages {
 
 		weeklyadlink.click();
 		com.sleepSeconds(4, "");
-		firstlink.click();
-		com.sleepSeconds(4, "");
+		//firstlink.click();
+		//com.sleepSeconds(4, "");
 		boolean test = false;
 
 		int weeklyadcount = weeklyadcategorieslinks.size();
@@ -133,7 +130,7 @@ public class staticPages {
 		menu.click();
 		mobweeklyadlink.click();
 		com.sleepSeconds(4, "");
-		firstlink.click();
+		//firstlink.click();
 		com.sleepSeconds(4, "");
 		boolean test = false;
 
@@ -188,4 +185,27 @@ public class staticPages {
 		}
 		return test;
 	}
+
+public boolean mobileclearancepage() {
+		
+		
+		menu.click();
+		com.sleepSeconds(2, "");
+		clearanceLink.click();
+		com.sleepSeconds(2, "");
+		String clerancePageTitle = DriverFactory.getInstance().getDriver().getTitle();
+		if (!(DriverFactory.getInstance().getDriver().getPageSource().contains(" page not found"))) {
+			ExtentFactory.getInstance().getExtent().info("clearance page displayed");
+			ExtentFactory.getInstance().getExtent().info("clearance page Title" + clerancePageTitle);
+			return true;
+		} else {
+			ExtentFactory.getInstance().getExtent().fail("clerance page not displayed");
+			ExtentFactory.getInstance().getExtent().info("clearance page Title" + clerancePageTitle);
+			return false;
+		}
+		
+	}
+
 }
+
+

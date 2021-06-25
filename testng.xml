@@ -15,13 +15,13 @@
 		<parameter name="Device" value="Desktop"></parameter>
 		
 		<classes>
-			<class name="com.bmusa.TestCases.Desktop_AccountVerification" />
-			<class name="com.bmusa.TestCases.Desktop_StoreandZipupdateVerification" />
+			<!-- <class name="com.bmusa.TestCases.Desktop_AccountVerification" />
+			<class name="com.bmusa.TestCases.Desktop_StoreandZipupdateVerification" /> -->
 			<class name="com.bmusa.TestCases.Desktop_userAccountVerification" />
-			<class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification" />
+			<!-- <class name="com.bmusa.TestCases.Desktop_SearchandBrowserVerification" />
 			<class name="com.bmusa.TestCases.Desktop_cartfunctionalitiesVerification" /> 
 			<class name="com.bmusa.TestCases.Desktop_staticpageValidation" />
-			<class name="com.bmusa.TestCases.Desktop_PaymentVerification" />
+			<class name="com.bmusa.TestCases.Desktop_PaymentVerification" /> -->
 
 		</classes>
 	</test> 
@@ -34,13 +34,13 @@
 		<parameter name="passWord1" value="test1234"></parameter>
 		<parameter name="Device" value="Mobile"></parameter>
 		<classes>
-			<class name="com.bmusa.TestCases.Mobile_AccountVerification" />
+			<!-- <class name="com.bmusa.TestCases.Mobile_AccountVerification" />
 			<class name="com.bmusa.TestCases.Mobile_SearchandBrowserVerification" />
 			<class name="com.bmusa.TestCases.Mobile_userAccountVerification" />
 			<class name="com.bmusa.TestCases.Mobile_StoreandZipupdateVerification" />
 			<class name="com.bmusa.TestCases.Mobile_cartfunctionalitiesVerification" />
 			<class name="com.bmusa.TestCases.Mobile_staticValidation" />
-			<class name="com.bmusa.TestCases.Mobile_PaymentVerification" />
+			<class name="com.bmusa.TestCases.Mobile_PaymentVerification" /> -->
 
 
 		</classes>

@@ -37,10 +37,6 @@ public class Mobile_cartfunctionalitiesVerification extends Basetest{
 	@Test
 	public void verifyMobileInstorePickup(String username, String password) {
 		lg.mob_accountClick();
-		/*
-		 * lg.enterUsername(username); lg.enterPassword(password);
-		 * lg.clickonSigninButton();
-		 */
 		sb.enterSearchterm("218664").clickSearchbutton();
 		ct.clicksearchandaddtocart();
 		Assert.assertTrue(ct.inStorepickup(username, password)," instore pick up and  item remove not updated unsuccessful");
