@@ -17,7 +17,7 @@ public class Desktop_userAccountVerification extends Basetest {
 
 	}
 
-	@Test
+	//@Test
 	public void verifyforgotpassword() {
 
 		lg.loginlinkClick();
@@ -25,7 +25,7 @@ public class Desktop_userAccountVerification extends Basetest {
 
 	}
 
-	@Parameters({ "userName", "passWord" })
+	@Parameters({ "userName1", "passWord1" })
 	@Test
 
 	public void verifyEditProfile(String username, String password) {
